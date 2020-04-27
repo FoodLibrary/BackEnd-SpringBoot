@@ -11,16 +11,5 @@ public class SpringbootHibernateTestApplication {
     public static void main(String[] args) {
 
         SpringApplication.run(SpringbootHibernateTestApplication.class, args);
-        /*
-        Product product = new Product();
-        product.setName("a");
-        product.setId("b");
-        product.setQuantity(1);
-        product.setPrice(1.5);
-        ProductController productController = new ProductController();
-        productController.addProduct(product);
-        */
-
     }
-
 }

@@ -25,21 +25,21 @@ public class ProductService {
         return repository.findAll();
     }
 
-    public Product getProductById(String id){
-        return repository.findById(id).orElse(null);
+    public Product getProductById(String portNum){
+        return repository.findById(portNum).orElse(null);
     }
 
     public Product getProductByName(String name){
         return repository.findByName(name);
     }
 
-    public String deleteProduct(String id){
-        repository.deleteById(id);
-        return "product removed" + id;
+    public String deleteProduct(String portNum){
+        repository.deleteById(portNum);
+        return "product removed" + portNum;
     }
 
     public Product updateProduct(Product product){
-        Product existingProduct = repository.findById(product.getId()).orElse(null);
+        Product existingProduct = repository.findById(product.getPortNum()).orElse(null);
         existingProduct.setName(product.getName());
         existingProduct.setQuantity(product.getQuantity());
         existingProduct.setPrice(product.getPrice());

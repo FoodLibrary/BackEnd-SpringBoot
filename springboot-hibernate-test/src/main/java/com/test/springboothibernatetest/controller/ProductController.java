@@ -28,9 +28,9 @@ public class ProductController {
         return service.getProducts();
     }
 
-    @GetMapping("/product/{id}")
-    public Product findProductById(@PathVariable String id){
-        return service.getProductById(id);
+    @GetMapping("/product/{portNum}")
+    public Product findProductById(@PathVariable String portNum){
+        return service.getProductById(portNum);
     }
 
     @GetMapping("/product/{name}")
@@ -43,9 +43,9 @@ public class ProductController {
         return service.updateProduct(product);
     }
 
-    @DeleteMapping("/delete/{id}")
-    public String deleteProduct(@PathVariable String id){
-        return service.deleteProduct(id);
+    @DeleteMapping("/delete/{portNum}")
+    public String deleteProduct(@PathVariable String portNum){
+        return service.deleteProduct(portNum);
     }
 }
 
